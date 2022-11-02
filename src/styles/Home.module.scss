@@ -1,0 +1,263 @@
+// ----------------------------------------------------------------------------
+// DEFINE
+
+$color--text: #dfdfdf;
+$color--accent: #ffff7f;
+$color--bg: #383838;
+
+$color-home-text: $color--text;
+$color-home-bg: $color--bg;
+$color-about-text: $color--text;
+$color-about-bg: #586070;
+$color-skill-text: #194c3f;
+$color-skill-bg: #5f7a73;
+$color-service-text: #742545;
+$color-service-bg: #916979;
+
+// ----------------------------------------------------------------------------
+// Main
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+
+  .section-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1024px;
+  }
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .section-content {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .social-links {
+    margin-top: 10px;
+
+    a {
+      margin: 0 10px;
+      width: 2rem;
+      height: 2rem;
+      font-size: 2rem;
+      line-height: 1;
+    }
+  }
+  .arrow-wrapper {
+    position: absolute;
+    bottom: 60px;
+    font-size: 2rem;
+
+    .anim-blink {
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0% {
+        opacity: 0;
+        transform: translate(0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(30px);
+      }
+    }
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+// ----------------------------------------------------------------------------
+// Section Home
+
+.section-home {
+  background-color: $color-home-bg;
+
+  .section-container {
+    width: auto;
+  }
+  .section-title {
+    color: $color--accent;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Section About
+
+.section-aboutme {
+  background-color: $color-about-bg;
+
+  .section-container {
+    max-width: 800px;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Section Skill
+
+.section-skills {
+  background-color: $color-skill-bg;
+
+  .section-container {
+    max-width: 960px;
+  }
+
+  .section-content {
+    display: flex;
+    justify-content: space-around;
+  
+    .skills-block {
+      flex: 1;
+      margin: 0 10px;
+      padding: 15px;
+      min-height: 240px;
+    }
+    .skills-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      color: $color-skill-text;
+    }
+    .skills-content {
+      margin-top: 10px;
+      color: $color-skill-text;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Section Service
+
+.section-service {
+  background-color: $color-service-bg;
+
+  .section-container {
+    max-width: 800px;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: column;
+  
+    .service-block {
+      display: flex;
+  
+      height: 240px;
+    }
+    .service-block-img {
+      height: 100%;
+  
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .service-block-summary {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+  
+      padding: 15px;
+    }
+    .service-header {
+      display: flex;
+    }
+    .service-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: $color-service-text;
+    }
+    .service-content {
+      flex: 1;
+      padding: 5px 0;
+      color: $color-service-text;
+      font-size: 0.9rem;
+    }
+    .service-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  
+      a {
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+        line-height: 1;
+  
+        color: $color-service-text;
+        &:hover, &:active, &.active {
+          color: $color--accent;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Header
+
+.header {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 64px;
+  padding: 10px;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  background-color: $color--bg;
+
+  nav {
+    ul {
+      display: flex;
+      flex: 1;
+    }
+    li {
+      list-style: none;
+      padding: 0 8px;
+    }
+    a {
+      display: inline-block;
+      padding: 0 8px;
+      line-height: 40px;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Footer
+
+.footer {
+  display: flex;
+  flex: 1;
+  height: 40px;
+  background-color: $color--bg;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+
+  .text {
+    font-size: 80%;
+  }
+}
