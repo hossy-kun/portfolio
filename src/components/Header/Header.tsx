@@ -2,26 +2,19 @@ import { Link as ScrollLink } from 'react-scroll';
 import styles from './Header.module.scss';
 
 type HeaderLink = {
-  to: string,
-  text: string,
+  to: string;
+  text: string;
 };
 
 type Props = {
-  links: HeaderLink[],
+  links: HeaderLink[];
 };
 
-const Header = ({links}: Props) => {
-
+const Header = ({ links }: Props) => {
   const navLinks = links.map((link, idx) => {
     return (
       <li key={idx}>
-        <ScrollLink
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          duration={600}
-          to={link.to}
-        >
+        <ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to={link.to}>
           {link.text}
         </ScrollLink>
       </li>

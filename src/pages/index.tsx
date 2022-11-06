@@ -15,12 +15,14 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header links={[
-        { to: 'home', text: 'HOME' },
-        { to: 'aboutme', text: 'ABOUT ME' },
-        { to: 'skills', text: 'SKILL SET' },
-        { to: 'service', text: 'SERVICE' },
-      ]}/>
+      <Header
+        links={[
+          { to: 'home', text: 'HOME' },
+          { to: 'aboutme', text: 'ABOUT ME' },
+          { to: 'skills', text: 'SKILL SET' },
+          { to: 'service', text: 'SERVICE' },
+        ]}
+      />
 
       <main className={styles.main}>
         <Section id="home" className={styles['section-home']}>
@@ -30,10 +32,10 @@ const Home = () => {
               <p>エンジニアポートフォリオ</p>
               <div className={styles['social-links']}>
                 <a href="https://github.com/hossy-kun" target="_blank" rel="noopener noreferrer">
-                  <SiGithub/>
+                  <SiGithub />
                 </a>
                 <a href="https://twitter.com/hossy_kun" target="_blank" rel="noopener noreferrer">
-                  <SiTwitter/>
+                  <SiTwitter />
                 </a>
               </div>
             </div>
@@ -44,10 +46,12 @@ const Home = () => {
             <h2 className={styles['section-title']}>ABOUT ME</h2>
             <div className={styles['section-content']}>
               <p>
-                情報系の大学を卒業後、システムエンジニアとして、社会人をスタート。金融、証券、交通系などの開発に携わってきました。主にWebアプリの開発、最近はフロントエンド領域を担当することが多く、この領域の関心が強いです。<br/>
-                <br/>
-                どうしたら、良いものが作れるだろうと日々考えながら、設計、コーディングを行っています。<br/>
-                <br/>
+                情報系の大学を卒業後、システムエンジニアとして、社会人をスタート。金融、証券、交通系などの開発に携わってきました。主にWebアプリの開発、最近はフロントエンド領域を担当することが多く、この領域の関心が強いです。
+                <br />
+                <br />
+                どうしたら、良いものが作れるだろうと日々考えながら、設計、コーディングを行っています。
+                <br />
+                <br />
                 でも、悩みすぎずに、楽しみながら「ものづくり」していきたいです。
               </p>
             </div>
@@ -110,7 +114,7 @@ const Home = () => {
                   </div>
                   <div className={styles['service-footer']}>
                     <a href="https://github.com/hossy-kun/portfolio" target="_blank" rel="noopener noreferrer">
-                      <SiGithub/>
+                      <SiGithub />
                     </a>
                   </div>
                 </div>
@@ -120,9 +124,9 @@ const Home = () => {
         </Section>
       </main>
 
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 };
 
 export default Home;

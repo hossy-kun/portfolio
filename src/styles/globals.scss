@@ -1,14 +1,16 @@
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   color: #dfdfdf;
 }
 
 a {
   text-decoration: none;
   color: #dfdfdf;
-  &:hover, &:active, &.active {
+  &:hover,
+  &:active,
+  &.active {
     color: #ffff7f;
   }
 }
@@ -25,15 +27,35 @@ ul {
 }
 
 @for $i from 1 through 30 {
-  .u-mg#{10*$i}  { margin:        10px * $i !important; }
-  .u-mg#{10*$i}t { margin-top:    10px * $i !important; }
-  .u-mg#{10*$i}r { margin-right:  10px * $i !important; }
-  .u-mg#{10*$i}b { margin-bottom: 10px * $i !important; }
-  .u-mg#{10*$i}l { margin-left:   10px * $i !important; }
+  .u-mg#{10*$i} {
+    margin: 10px * $i !important;
+  }
+  .u-mg#{10*$i}t {
+    margin-top: 10px * $i !important;
+  }
+  .u-mg#{10*$i}r {
+    margin-right: 10px * $i !important;
+  }
+  .u-mg#{10*$i}b {
+    margin-bottom: 10px * $i !important;
+  }
+  .u-mg#{10*$i}l {
+    margin-left: 10px * $i !important;
+  }
 
-  .u-pd#{10*$i}  { padding:        10px * $i !important; }
-  .u-pd#{10*$i}t { padding-top:    10px * $i !important; }
-  .u-pd#{10*$i}r { padding-right:  10px * $i !important; }
-  .u-pd#{10*$i}b { padding-bottom: 10px * $i !important; }
-  .u-pd#{10*$i}l { padding-left:   10px * $i !important; }
+  .u-pd#{10*$i} {
+    padding: 10px * $i !important;
+  }
+  .u-pd#{10*$i}t {
+    padding-top: 10px * $i !important;
+  }
+  .u-pd#{10*$i}r {
+    padding-right: 10px * $i !important;
+  }
+  .u-pd#{10*$i}b {
+    padding-bottom: 10px * $i !important;
+  }
+  .u-pd#{10*$i}l {
+    padding-left: 10px * $i !important;
+  }
 }
