@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { SiGithub, SiTwitter } from 'react-icons/si';
-import { FaChevronDown } from 'react-icons/fa';
 import cx from 'classnames';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import Section from '../components/Section/Section';
 
 const Home = () => {
   return (
@@ -18,24 +18,23 @@ const Home = () => {
       <Header/>
 
       <main className={styles.main}>
-        <section id="home" className={cx(styles['section'], styles['section-home'])}>
+        <Section id="home" className={styles['section-home']}>
           <div className={styles['section-container']}>
-            <h1 className={styles['section-title']}>HOSSY PORTFOLIO</h1>
-            <p>エンジニアポートフォリオ</p>
-            <div className={styles['social-links']}>
-              <a href="https://github.com/hossy-kun" target="_blank" rel="noopener noreferrer">
-                <SiGithub/>
-              </a>
-              <a href="https://twitter.com/hossy_kun" target="_blank" rel="noopener noreferrer">
-                <SiTwitter/>
-              </a>
+            <div>
+              <h1 className={styles['section-title']}>HOSSY PORTFOLIO</h1>
+              <p>エンジニアポートフォリオ</p>
+              <div className={styles['social-links']}>
+                <a href="https://github.com/hossy-kun" target="_blank" rel="noopener noreferrer">
+                  <SiGithub/>
+                </a>
+                <a href="https://twitter.com/hossy_kun" target="_blank" rel="noopener noreferrer">
+                  <SiTwitter/>
+                </a>
+              </div>
             </div>
           </div>
-          <div className={styles['arrow-wrapper']}>
-            <FaChevronDown className={styles['anim-blink']}/>
-          </div>
-        </section>
-        <section id="aboutme" className={cx(styles['section'], styles['section-aboutme'])}>
+        </Section>
+        <Section id="aboutme" className={styles['section-aboutme']}>
           <div className={styles['section-container']}>
             <h2 className={styles['section-title']}>ABOUT ME</h2>
             <div className={styles['section-content']}>
@@ -48,11 +47,8 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className={styles['arrow-wrapper']}>
-            <FaChevronDown className={styles['anim-blink']}/>
-          </div>
-        </section>
-        <section id="skills" className={cx(styles.section, styles['section-skills'])}>
+        </Section>
+        <Section id="skills" className={styles['section-skills']}>
           <div className={styles['section-container']}>
             <h2 className={styles['section-title']}>SKILL SET</h2>
             <div className={styles['section-content']}>
@@ -85,11 +81,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className={styles['arrow-wrapper']}>
-            <FaChevronDown className={styles['anim-blink']}/>
-          </div>
-        </section>
-        <section id="service" className={cx(styles.section, styles['section-service'])}>
+        </Section>
+        <Section id="service" className={styles['section-service']} last>
           <div className={styles['section-container']}>
             <h2 className={styles['section-title']}>SERVICE</h2>
             <div className={styles['section-content']}>
@@ -116,10 +109,10 @@ const Home = () => {
                     </a>
                   </div>
                 </div>
-                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </Section>
       </main>
 
       <Footer/>
