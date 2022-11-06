@@ -15,7 +15,12 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header/>
+      <Header links={[
+        { to: 'home', text: 'HOME' },
+        { to: 'aboutme', text: 'ABOUT ME' },
+        { to: 'skills', text: 'SKILL SET' },
+        { to: 'service', text: 'SERVICE' },
+      ]}/>
 
       <main className={styles.main}>
         <Section id="home" className={styles['section-home']}>

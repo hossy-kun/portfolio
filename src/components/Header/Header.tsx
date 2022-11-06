@@ -1,17 +1,37 @@
 import { Link as ScrollLink } from 'react-scroll';
 import styles from './Header.module.scss';
 
+type HeaderLink = {
+  to: string,
+  text: string,
+};
 
-const Header = () => {
+type Props = {
+  links: HeaderLink[],
+};
+
+const Header = ({links}: Props) => {
+
+  const navLinks = links.map((link, idx) => {
+    return (
+      <li key={idx}>
+        <ScrollLink
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={600}
+          to={link.to}
+        >
+          {link.text}
+        </ScrollLink>
+      </li>
+    );
+  });
+
   return (
     <header className={styles.header}>
       <nav role="navigation">
-        <ul>
-          <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="home">HOME</ScrollLink></li>
-          <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="aboutme">ABOUT ME</ScrollLink></li>
-          <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="skills">SKILL SET</ScrollLink></li>
-          <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="service">SERVICE</ScrollLink></li>
-        </ul>
+        <ul>{navLinks}</ul>
       </nav>
     </header>
   );
