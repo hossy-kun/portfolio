@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
+import styles from './index.module.scss';
 import { SiGithub, SiTwitter } from 'react-icons/si';
 import cx from 'classnames';
 import Header from '../components/Header/Header';
