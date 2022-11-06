@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.footer {
+  display: flex;
+  flex: 1;
+  height: 40px;
+  background-color: $color--bg;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+
+  .text {
+    font-size: 80%;
+  }
+}

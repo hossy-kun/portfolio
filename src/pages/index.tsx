@@ -2,10 +2,11 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { SiGithub, SiTwitter } from 'react-icons/si';
 import { FaChevronDown } from 'react-icons/fa';
-import { Link as ScrollLink } from 'react-scroll';
 import cx from 'classnames';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -14,16 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <nav role="navigation">
-          <ul>
-            <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="home">HOME</ScrollLink></li>
-            <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="aboutme">ABOUT ME</ScrollLink></li>
-            <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="skills">SKILL SET</ScrollLink></li>
-            <li><ScrollLink activeClass="active" spy={true} smooth={true} duration={600} to="service">SERVICE</ScrollLink></li>
-          </ul>
-        </nav>
-      </header>
+      <Header/>
 
       <main className={styles.main}>
         <section id="home" className={cx(styles['section'], styles['section-home'])}>
@@ -130,9 +122,9 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        <span className={styles.text}>&copy; 2022 Hossy.</span>
-      </footer>
+      <Footer/>
     </div>
   )
-}
+};
+
+export default Home;

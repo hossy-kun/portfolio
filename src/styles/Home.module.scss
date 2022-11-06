@@ -1,18 +1,4 @@
-// ----------------------------------------------------------------------------
-// DEFINE
-
-$color--text: #dfdfdf;
-$color--accent: #ffff7f;
-$color--bg: #383838;
-
-$color-home-text: $color--text;
-$color-home-bg: $color--bg;
-$color-about-text: $color--text;
-$color-about-bg: #586070;
-$color-skill-text: #194c3f;
-$color-skill-bg: #5f7a73;
-$color-service-text: #742545;
-$color-service-bg: #916979;
+@import "./_variables.scss";
 
 // ----------------------------------------------------------------------------
 // Main
@@ -121,7 +107,7 @@ $color-service-bg: #916979;
   .section-content {
     display: flex;
     justify-content: space-around;
-  
+
     .skills-block {
       flex: 1;
       margin: 0 10px;
@@ -154,15 +140,15 @@ $color-service-bg: #916979;
   .section-content {
     display: flex;
     flex-direction: column;
-  
+
     .service-block {
       display: flex;
-  
+
       height: 240px;
     }
     .service-block-img {
       height: 100%;
-  
+
       img {
         width: auto;
         height: 100%;
@@ -172,7 +158,7 @@ $color-service-bg: #916979;
       display: flex;
       flex-direction: column;
       flex: 1;
-  
+
       padding: 15px;
     }
     .service-header {
@@ -193,71 +179,18 @@ $color-service-bg: #916979;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-  
+
       a {
         width: 2rem;
         height: 2rem;
         font-size: 2rem;
         line-height: 1;
-  
+
         color: $color-service-text;
         &:hover, &:active, &.active {
           color: $color--accent;
         }
       }
     }
-  }
-}
-
-// ----------------------------------------------------------------------------
-// Header
-
-.header {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: center;
-
-  height: 64px;
-  padding: 10px;
-
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-
-  background-color: $color--bg;
-
-  nav {
-    ul {
-      display: flex;
-      flex: 1;
-    }
-    li {
-      list-style: none;
-      padding: 0 8px;
-    }
-    a {
-      display: inline-block;
-      padding: 0 8px;
-      line-height: 40px;
-    }
-  }
-}
-
-// ----------------------------------------------------------------------------
-// Footer
-
-.footer {
-  display: flex;
-  flex: 1;
-  height: 40px;
-  background-color: $color--bg;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-
-  .text {
-    font-size: 80%;
   }
 }
