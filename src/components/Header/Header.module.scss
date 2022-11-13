@@ -6,30 +6,78 @@
   justify-content: flex-end;
   align-items: center;
 
-  height: 64px;
-  padding: 10px;
-
   position: fixed;
-  width: 100%;
   top: 0;
+
+  height: 64px;
+  width: 100%;
+
   z-index: 1000;
 
   background-color: $color--bg;
+}
 
-  nav {
+.menu {
+  ul {
+    display: flex;
+    flex: 1;
+    padding: 0 8px;
+  }
+  li {
+    list-style: none;
+    padding: 0 8px;
+  }
+  a {
+    display: inline-block;
+    padding: 0 8px;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+}
+
+.hamburger {
+  display: none;
+
+  position: fixed;
+  top: 8px;
+  right: 8px;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .menu {
+    position: fixed;
+    top: 64px;
+    left: 100vw;
+
+    width: 100%;
+
+    transition: 0.5s;
+    opacity: 0;
+
+    &.open {
+      left: 0;
+      opacity: 1;
+    }
+
     ul {
-      display: flex;
-      flex: 1;
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
     }
     li {
-      list-style: none;
-      padding: 0 8px;
+      width: 100%;
+      background-color: rgba($color--bg, 0.8);
+      text-align: center;
+      padding: 0;
     }
     a {
-      display: inline-block;
-      padding: 0 8px;
-      line-height: 40px;
-      cursor: pointer;
+      width: 100%;
+      line-height: 64px;
     }
+  }
+
+  .hamburger {
+    display: block;
   }
 }
