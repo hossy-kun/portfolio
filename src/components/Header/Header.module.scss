@@ -44,7 +44,7 @@
   right: 8px;
 }
 
-@media screen and (max-width: $mobile-breakpoint) {
+@media screen and (max-width: $breakpoint-sm) {
   .menu {
     position: fixed;
     top: 64px;

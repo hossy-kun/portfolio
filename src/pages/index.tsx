@@ -71,7 +71,7 @@ const Home = () => {
                 </ul>
               </div>
               <div className={cx(styles['card'], styles['skills-block'])}>
-                <h3 className={styles['skills-title']}>フレームワーク＆ライブラリ</h3>
+                <h3 className={styles['skills-title']}>フレームワーク & ライブラリ</h3>
                 <ul className={styles['skills-content']}>
                   <li>Angular/React</li>
                   <li>jQuery</li>
@@ -80,7 +80,7 @@ const Home = () => {
                 </ul>
               </div>
               <div className={cx(styles['card'], styles['skills-block'])}>
-                <h3 className={styles['skills-title']}>環境＆ツール</h3>
+                <h3 className={styles['skills-title']}>環境 & ツール</h3>
                 <ul className={styles['skills-content']}>
                   <li>Google Cloud Platform</li>
                   <li>Git</li>

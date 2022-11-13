@@ -1,7 +1,20 @@
 // ----------------------------------------------------------------------------
+// WIDTH
+
+$width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
+$width-xl: 1200px;
+$width-xxl: 1400px;
+
+// ----------------------------------------------------------------------------
 // RESPONSIVE
 
-$mobile-breakpoint: 600px;
+$breakpoint-sm: $width-sm;
+$breakpoint-md: $width-md;
+$breakpoint-lg: $width-lg;
+$breakpoint-xl: $width-xl;
+$breakpoint-xxl: $width-xxl;
 
 // ----------------------------------------------------------------------------
 // COLOR

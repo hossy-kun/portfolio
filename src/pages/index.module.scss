@@ -13,7 +13,7 @@
   margin: 0 auto;
   padding: 20px;
   width: 100%;
-  max-width: 960px;
+  max-width: $width-lg;
 }
 
 .section-title {
@@ -45,6 +45,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: $breakpoint-sm) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
 // ----------------------------------------------------------------------------
 // Section Home
 
@@ -67,7 +73,7 @@
   background-color: $color-about-bg;
 
   .section-container {
-    max-width: 800px;
+    max-width: $width-md;
   }
 }
 
@@ -84,11 +90,11 @@
     .skills-block {
       flex: 1;
       margin: 0 10px;
-      padding: 15px;
+      padding: 20px;
       min-height: 240px;
     }
     .skills-title {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       text-align: center;
       color: $color-skill-text;
@@ -100,6 +106,24 @@
   }
 }
 
+@media screen and (max-width: $breakpoint-lg) {
+  .section-skills {
+    .section-container {
+      max-width: $width-md;
+    }
+    .section-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .skills-block {
+        margin: 10px 0;
+        min-height: auto;
+      }
+    }
+  }
+}
+
 // ----------------------------------------------------------------------------
 // Section Service
 
@@ -107,7 +131,7 @@
   background-color: $color-service-bg;
 
   .section-container {
-    max-width: 800px;
+    max-width: $width-md;
   }
 
   .section-content {
@@ -116,15 +140,15 @@
 
     .service-block {
       display: flex;
-
-      height: 240px;
     }
     .service-block-img {
-      height: 100%;
+      max-width: 320px;
+      height: 240px;
+      overflow: hidden;
 
       img {
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
       }
     }
     .service-block-summary {
@@ -132,19 +156,19 @@
       flex-direction: column;
       flex: 1;
 
-      padding: 15px;
+      padding: 20px;
     }
     .service-header {
       display: flex;
     }
     .service-title {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: bold;
       color: $color-service-text;
     }
     .service-content {
       flex: 1;
-      padding: 5px 0;
+      padding-top: 10px;
       color: $color-service-text;
       font-size: 0.9rem;
     }
@@ -165,6 +189,30 @@
         &.active {
           color: $color--accent;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .section-service {
+    .section-container {
+      max-width: $width-sm;
+    }
+
+    .section-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .service-block {
+        display: flex;
+        flex-direction: column;
+      }
+      .service-block-img {
+        max-width: 480px;
+        max-height: 360px;
+        height: auto;
       }
     }
   }
