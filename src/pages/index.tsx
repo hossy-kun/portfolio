@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import styles from './index.module.scss';
-import { SiGithub, SiTwitter } from 'react-icons/si';
+import { SiGithub, SiX } from 'react-icons/si';
 import cx from 'classnames';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Section from '../components/Section/Section';
+import Image from 'next/image';
 
 const Home = () => {
   return (
@@ -35,7 +36,7 @@ const Home = () => {
                   <SiGithub />
                 </a>
                 <a href="https://twitter.com/hossy_kun" target="_blank" rel="noopener noreferrer">
-                  <SiTwitter />
+                  <SiX />
                 </a>
               </div>
             </div>
@@ -97,7 +98,11 @@ const Home = () => {
             <div className={styles['section-content']}>
               <div className={cx(styles['card'], styles['service-block'])}>
                 <div className={styles['service-block-img']}>
-                  <img src="/images/portfolio.png" alt="ポートフォリオ"></img>
+                  <Image
+                    src="/images/portfolio.png" alt="ポートフォリオ"
+                    width={0} height={0} sizes="100%"
+                    style={{ width: "100%", height: "auto" }}
+                  />
                 </div>
                 <div className={styles['service-block-summary']}>
                   <div className={styles['service-header']}>

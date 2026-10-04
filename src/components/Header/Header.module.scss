@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@use '../../styles/variables' as var;
 
 .header {
   display: flex;
@@ -14,7 +14,7 @@
 
   z-index: 1000;
 
-  background-color: $color--bg;
+  background-color: var.$color--bg;
 }
 
 .menu {
@@ -44,7 +44,7 @@
   right: 8px;
 }
 
-@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: var.$breakpoint-sm) {
   .menu {
     position: fixed;
     top: 64px;
@@ -67,7 +67,7 @@
     }
     li {
       width: 100%;
-      background-color: rgba($color--bg, 0.8);
+      background-color: rgba(var.$color--bg, 0.8);
       text-align: center;
       padding: 0;
     }

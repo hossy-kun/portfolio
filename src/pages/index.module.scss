@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@use '../styles/variables' as var;
 
 // ----------------------------------------------------------------------------
 // Main
@@ -13,7 +13,7 @@
   margin: 0 auto;
   padding: 20px;
   width: 100%;
-  max-width: $width-lg;
+  max-width: var.$width-lg;
 }
 
 .section-title {
@@ -45,7 +45,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: $breakpoint-sm) {
+@media screen and (max-width: var.$breakpoint-sm) {
   .section-title {
     font-size: 2.2rem;
   }
@@ -55,14 +55,14 @@
 // Section Home
 
 .section-home {
-  background-color: $color-home-bg;
+  background-color: var.$color-home-bg;
 
   .section-container {
     display: flex;
     justify-content: center;
   }
   .section-title {
-    color: $color--accent;
+    color: var.$color--accent;
   }
 }
 
@@ -70,10 +70,10 @@
 // Section About
 
 .section-aboutme {
-  background-color: $color-about-bg;
+  background-color: var.$color-about-bg;
 
   .section-container {
-    max-width: $width-md;
+    max-width: var.$width-md;
   }
 }
 
@@ -81,7 +81,7 @@
 // Section Skill
 
 .section-skills {
-  background-color: $color-skill-bg;
+  background-color: var.$color-skill-bg;
 
   .section-content {
     display: flex;
@@ -97,19 +97,19 @@
       font-size: 1.1rem;
       font-weight: bold;
       text-align: center;
-      color: $color-skill-text;
+      color: var.$color-skill-text;
     }
     .skills-content {
       margin-top: 10px;
-      color: $color-skill-text;
+      color: var.$color-skill-text;
     }
   }
 }
 
-@media screen and (max-width: $breakpoint-lg) {
+@media screen and (max-width: var.$breakpoint-lg) {
   .section-skills {
     .section-container {
-      max-width: $width-md;
+      max-width: var.$width-md;
     }
     .section-content {
       display: flex;
@@ -128,10 +128,10 @@
 // Section Service
 
 .section-service {
-  background-color: $color-service-bg;
+  background-color: var.$color-service-bg;
 
   .section-container {
-    max-width: $width-md;
+    max-width: var.$width-md;
   }
 
   .section-content {
@@ -164,12 +164,12 @@
     .service-title {
       font-size: 1.1rem;
       font-weight: bold;
-      color: $color-service-text;
+      color: var.$color-service-text;
     }
     .service-content {
       flex: 1;
       padding-top: 10px;
-      color: $color-service-text;
+      color: var.$color-service-text;
       font-size: 0.9rem;
     }
     .service-footer {
@@ -183,21 +183,21 @@
         font-size: 2rem;
         line-height: 1;
 
-        color: $color-service-text;
+        color: var.$color-service-text;
         &:hover,
         &:active,
         &.active {
-          color: $color--accent;
+          color: var.$color--accent;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: $breakpoint-md) {
+@media screen and (max-width: var.$breakpoint-md) {
   .section-service {
     .section-container {
-      max-width: $width-sm;
+      max-width: var.$width-sm;
     }
 
     .section-content {
