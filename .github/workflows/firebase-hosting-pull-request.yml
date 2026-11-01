@@ -14,4 +14,5 @@ jobs:
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_D4315 }}"
+          firebaseToolsVersion: 15.34.0
           projectId: portfolio-d4315
