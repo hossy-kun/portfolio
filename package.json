@@ -22,7 +22,7 @@
     "ress": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^26",
+    "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-scroll": "^1.8.10",
